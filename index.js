@@ -151,19 +151,21 @@ async function starts() {
 	FxBot.version = [2, 2119, 6]
 	FxBot.logger.level = 'warn'
 	console.log(banner.string)
+	console.log(color('[ BOT]','aqua'), color("BOT BY FELIXCRACK 409", "yellow"))
+	console.log('>', '[',color('INFO','blue'),']','Suscribete A Felixcrack 409...')
 	FxBot.on('qr', () => {
-		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Escanea el QR sempai~'))
+	console.log(color('[','white'), color('!','red'), color(']','white'), color(' Escanea El Código QR De Arriba'))
 	})
 
 	fs.existsSync('./FxBot.json') && FxBot.loadAuthInfo('./FxBot.json')
 	FxBot.on('connecting', () => {
-		start('2', 'Soy un poco lenta, espera T-T...')
+	console.log(color('> [ INFO ]', 'white'), color('Conectando...'))
 	})
 	FxBot.on('open', () => {
-		success('2', 'Conectada!!!👌..')
+	console.log(color('> [ INFO ]', 'white'), color('Ya me conecte 👌🏻'))
 	})
-	await FxBot.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./FxBot.json', JSON.stringify(FxBot.base64EncodedAuthInfo(), null, '\t'))
+		await FxBot.connect({timeoutMs: 30*1000})
+  fs.writeFileSync('./FxBot.json', JSON.stringify(FxBot.base64EncodedAuthInfo(), null, '\t'))
 
 	FxBot.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
