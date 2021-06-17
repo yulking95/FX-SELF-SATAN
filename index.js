@@ -1,8 +1,7 @@
-//RECODE BY MHANKBARBAR
+//BASW ORIGT BY MHANKBARBAR
 //SELF BOT BY FxBot
-//YANG PASTI DISINI BANYAK YANG GUA COPAS
-//TAMBAHIN NICK GUA LAH "FxBot"
-//JANGAN CUMA PAKE DOANG
+//DEJA CRÉDITOS
+//Felixcrack 409 es el creador Oficial de "FxBot"
 const sotoy = [
 		'🍊 : 🍒 : 🍐',
 		'🍒 : 🔔 : 🍊',
@@ -105,16 +104,11 @@ public = false
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
             + 'FN:𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑜𝑡⛥シ︎\n'
-            + 'ORG:Owner Satancito;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=12602746309:+1 (260) 274-6309\n'
+            + 'ORG:Owner Felix;\n'
+            + 'TEL;type=CELL;type=VOICE;waid=12602xxxx309:+1 (260) xxxxx09\n'
             + 'END:VCARD'
             
-const vcard1 = 'BEGIN:VCARD\n'
-            + 'VERSION:3.0\n'
-            + 'FN:𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑜𝑡⛥シ︎\n'
-            + 'ORG:Owner Satancito;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=50373488366:+503 7348 8366\n'
-            + 'END:VCARD'
+
 //*********** 𝗔𝗣𝗜𝗞𝗘𝗬 ***********//
 const BarBarKey = 'IDxO1TFYnKADlX4pxcHa'
 const VhtearKey = '1BlnApiIkyPake'
