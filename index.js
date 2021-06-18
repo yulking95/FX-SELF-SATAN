@@ -718,26 +718,8 @@ if (!isGroup) return reply(mess.only.group)
 					}
                     break
 
-case 'zingfake':
-					if (args.length < 1) return reply(mess.blank)
-					teks = body.slice(8)
-					if (teks.length > 25) return reply('El texto es largo, hasta 25 caracteres')
-					reply('*Lo estoy haciendo, si me sale un error, inténtalo de nuevo ✓*')
-					buffer = await getBuffer(`https://ubbornag.sirv.com/Screenshot_20210513-151821.png?text.0.text=${teks}&text.0.position.x=-40%25&text.0.position.y=-65%25&text.0.size=30&text.0.color=000000&text.0.opacity=53&text.0.font.family=Shadows%20Into%20Light%20Two&text.0.outline.blur=15`)
-					FxBot.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ten tu zing 😈'})
-					break
-case 'simi':
-case 'bot':
-if (args.length < 1) return reply(`Use ${prefix}simi texto`)
-try { 
-	X = body.slice(4)
-anu = await fetchJson(`https://api.simsimi.net/v1/?text=${X}&lang=es`, {method: 'get'})
-if (anu.error) return reply('No puedo leer lo que no existe 🐤 (habla weon)')
-FxBot.sendMessage(from, `${anu.success} 🐤`, text, {quoted: mek})
-} catch {
-reply("Hubo una falla en mi sistema 😣")
-}
-break
+
+
                 case 'slot2':
                     result = await fetchJson(`https://api.xteam.xyz/game/virtualslot?APIKEY=AkiraBotWa`)
                         txt = `*🎰Slot adquirido🎰* \n\n${result.map}\n`
