@@ -89,10 +89,10 @@ const sleep = async (ms) => {
 prefix = ''
 hit_today = []
 blocked = []
-fake = '- 𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑜𝑡⛥ -'
+fake = '- ⚡HH-BOT⚡ -'
 fakeimage = fs.readFileSync(`./media/FxBot.jpeg`)
 numbernye = '0'
-join = '\`\`\`Hola, Bienvenido al grupo UwU\n Soy la bot del Grupo,espero ser de tu agrado, lee las reglas pofi >~<💞\n - [ 𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑜𝑡⛥ ] -'
+join = '\`\`\`Hola, Bienvenid@ al grupo UwU\n Soy el bot del Grupo,espero ser de tu agrado, lee las reglas y evite ser baneado🙏\n - [ ⚡HH-BOT⚡ ] -'
 leave = setting.leave
 namabot = setting.namabot
 promote = setting.promote
@@ -103,8 +103,8 @@ public = false
 //*********** VCARD  ***********//
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
-            + 'FN:𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑜𝑡⛥シ︎\n'
-            + 'ORG:Owner Felix;\n'
+            + 'FN:Hatori Hanzo\n'
+            + 'ORG:HH;\n'
             + 'TEL;type=CELL;type=VOICE;waid=12602xxxx309:+1 (260) xxxxx09\n'
             + 'END:VCARD'
             
@@ -126,7 +126,7 @@ function kyun(seconds){
   var seconds = Math.floor(seconds % 60);
 
   //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
-  return `${pad(hours)} Horas ${pad(minutes)} Minuto ${pad(seconds)} Segundo`
+  return `${pad(hours)} Horas ${pad(minutes)} Minutos ${pad(seconds)} Segundos`
 }
 function tanggal(){
 myMonths = ["enero","febrero","marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","octubre","Noviembre","Deciembre"];
@@ -186,13 +186,13 @@ async function starts() {
 ┃*${mdata.subject}*
 ┗━━━━━━━━━━━━━━━━━
 ┏━━━━━━━━━━━━━━━━━
-┃   「 *_BIENVENIDO_* 」
+┃ 「 *_BIENVENIDO_* 」
 ┗━━━━━━━━━━━━━━━━━
 ┏━━━━━━━━━━━━━━━━━
-┠⊷️ *Suscríbete*:
-┠⊷️*http://bit.ly/2ZUH2jP
-┠⊷️ *Grupo Oficial*:
-┠⊷️ *http://bit.ly/3hpkba4
+┠⊷️ REGLAS
+┠⊷️❎
+┠⊷️❎ 
+┠⊷️❎
 ┗━━━━━━━━━━━━━━━━━
 ┏━━━━━━━━━━━━━━━━━
 ┠⊷️「 *DESCRIPCIÓN* 」
@@ -292,11 +292,11 @@ FxBot.on('CB:action,,call', async json => {
 			const type = Object.keys(mek.message)[0]
 			const apiKey = setting.apiKey 
 			const { text, extendedText, contact, caption, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
-			const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
+			const time = moment.tz('America/Bogota').format('DD/MM HH:mm:ss')
 			const date = new Date().toLocaleDateString()
-			const jam = moment.tz('Asia/Jakarta').format('HH:mm')
-            const wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
-            const wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
+			const jam = moment.tz('America/Lima').format('HH:mm')
+            const wita = moment.tz('America/Bogota').format('HH:mm:ss')
+            const wit = moment.tz('America/Lima').format('HH:mm:ss')
         
 			body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
@@ -309,11 +309,11 @@ FxBot.on('CB:action,,call', async json => {
 			
 
 			mess = {
-				wait: ' Soy lenta, espera T-T ',
+				wait: ' Estoy trabajando, espera... ',
 				nsfwoff: '「 ❗ 」La Funcion De Nsfw No Está Activa!',
 				success: '✔️ Listooo ✔️',
 				error: {
-					stick: '❌ Falló, se produjo un error al convertir la imagen en una pegatina ❌',
+					stick: '❌ Falló, se produjo un error al convertir la imagen en sticker ❌',
 					Iv: '❌ Enlace inválido ❌'
 				},
 				only: {
@@ -365,7 +365,7 @@ const fakegroup = (teks) => {
 				quoted: {
 					key: {
 						fromMe: false,
-						participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "50373488366@g.us" } : {})
+						participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "51928564603@g.us" } : {})
 					},
 					message: {
 						conversation: fake
@@ -394,7 +394,7 @@ key: {
 						"jpegThumbnail": fs.readFileSync(`./media/FxBot.jpeg`)
 					},
 					"title": fake,
-					"description": "𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑜𝑡⛥",
+					"description": "HHBOT",
 					"currencyCode": "USD",
 					"priceAmount1000": "2000",
 					"retailerId": "Satancito",
@@ -472,7 +472,7 @@ const sendMediaURL = async(to, url, text="", mids=[]) =>{
 
             //_USUÁRIO BANEADO
            if (isCmd && isBanned) {
-           return console.log(color('[BAN] Ignorando comando', 'blue'), color(moment.tz('America/Sao_Paulo').format('HH:mm:ss'), 'yellow'), color(`${command}`),'DE:', color(pushname))}
+           return console.log(color('[BAN] Ignorando comando', 'blue'), color(moment.tz('America/Lima').format('HH:mm:ss'), 'yellow'), color(`${command}`),'DE:', color(pushname))}
 
    if (itsMe){
      if(chats.toLowerCase() == `${prefix}self`){
@@ -490,14 +490,14 @@ const sendMediaURL = async(to, url, text="", mids=[]) =>{
 
 
 			if (!isGroup && !isCmd) console.log(color(time, "white"), color("[ PRIVATE ]", "aqua"), color(budy, "white"), "from", color(sender.split('@')[0], "yellow"))
-            if (isGroup && !isCmd) console.log(color(time, "white"), color("[  GROUP  ]", "aqua"), color(budy, "white"), "from", color(sender.split('@')[0], "yellow"), "in", color(groupName, "yellow"))
-            if (!isGroup && isCmd) console.log(color(time, "white"), color("[ COMMAND ]", "aqua"), color(budy, "white"), "from", color(sender.split('@')[0], "yellow"))
-            if (isGroup && isCmd) console.log(color(time, "white"), color("[ COMMAND ]", "aqua"), color(budy, "white"), "from", color(sender.split('@')[0], "yellow"), "in", color(groupName, "yellow"))
+            if (isGroup && !isCmd) console.log(color(time, "white"), color("[  GROUP  ]", "aqua"), color(budy, "white"), "de", color(sender.split('@')[0], "yellow"), "en", color(groupName, "yellow"))
+            if (!isGroup && isCmd) console.log(color(time, "white"), color("[ COMMAND ]", "aqua"), color(budy, "white"), "de", color(sender.split('@')[0], "yellow"))
+            if (isGroup && isCmd) console.log(color(time, "white"), color("[ COMMAND ]", "aqua"), color(budy, "white"), "de", color(sender.split('@')[0], "yellow"), "en", color(groupName, "yellow"))
 			let authorname = FxBot.contacts[from] != undefined ? FxBot.contacts[from].vname || FxBot.contacts[from].notify : undefined	
 			if (authorname != undefined) { } else { authorname = groupName }	
 			
 			function addMetadata(packname, author) {	
-				if (!packname) packname = 'WABot'; if (!author) author = 'Bot';	
+				if (!packname) packname = ''; if (!author) author = '';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -543,11 +543,11 @@ const sendMediaURL = async(to, url, text="", mids=[]) =>{
                     wew = fs.readFileSync(`./media/FxBot.jpeg`)
                     lzain = `              𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗜𝗢𝗡
 ╭─────────────────❏
-│ Hola Yo Soy ${namabot} 👋🏻
+│ Hola,Soy ${namabot} 👋🏻
 ├─────────────────❏ 
 │ ❍➣ Prefijo:「 ${prefix} 」
 ├─────────────────❏ 
-│ ❍➣ Creador: Felixcrack 409
+│ ❍➣ Creador: Hatori
 ├─────────────────❏ 
 │ ❍➣ Conección: BaiLeys
 ├─────────────────❏ 
@@ -560,7 +560,7 @@ const sendMediaURL = async(to, url, text="", mids=[]) =>{
 │ ❍➣ Modo: Encendido
 ├─────────────────❏ 
 │ ❍➣ Grupo Oficial
-│ ❍➣ http://bit.ly/Felixcrack-GRUPO
+│ ❍➣ no
 ╰─────────────────❏  
 ╭───❏ 𝗖𝗥𝗘𝗔𝗥 𝗦𝗧𝗜𝗖𝗞𝗘𝗥𝗦
 │⊷️ ${f}${prefix}sticker${f}
@@ -773,7 +773,7 @@ if (!isGroup) return reply(mess.only.group)
             break
             case 'archive':
                 if (!mek.key.fromMe) return reply('*Este comandó solo puede ser usado por mi 🌚🤙🏼*')
-                reply('*okey wait..*')
+                reply('*okey espere..*')
                 console.log('chat de archivo de éxito = ' + from)
                 await sleep(3000)
                 FxBot.modifyChat(from, ChatModification.archive)
@@ -812,15 +812,15 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedVideo ) &&
             reply('Responde a una imagen o un video')
             }
             break
-case 'grupo':
+/*case grupo:
 					case 'felixgrupo':
 buffer = await getBuffer(`https://telegra.ph/file/a3d623676c5a237f4ac86.jpg`)
 					FxBot.sendMessage(from, buffer, image, {quoted: mek, caption: 'Link del grupo Felixcrack BOT OFC, Todos son bienvenidos!! 🤗\n-https://chat.whatsapp.com/DAheuNgcvCj92UNcZFTKEo', sendEphemeral: true, contextInfo: { forwardingScore: 1000, isForwarded: true }})
-break
+break*/
                 
                 case 'shutdown':
                 if (!mek.key.fromMe) return reply('*Este comandó solo puede ser usado por mi 🌚🤙🏼*')
-	        await FxBot.sendMessage(from, `Bye...\n_𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑜𝑡⛥ apagandose..._`, text,{quoted : freply})
+	        await FxBot.sendMessage(from, `Bye...\n HHBOT apagandose..._`, text,{quoted : freply})
 		await sleep(3000)
                 FxBot.close()
 		break
@@ -1012,7 +1012,7 @@ case 'admins':
 case 'adminslista':
 if (!isGroupAdmins) return reply(mess.only.admin)
                    if (!isGroup) return reply(mess.only.group)
-					teks = `▢ Lista de los guapos del grupo *${groupMetadata.subject}*\n▢ Total : ${groupAdmins.length}\n▢ Mensaje:* ${body.slice(12)}\n\n`
+					teks = `▢ Lista de los admins del grupo *${groupMetadata.subject}*\n▢ Total : ${groupAdmins.length}\n▢ Mensaje:* ${body.slice(12)}\n\n`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
@@ -1159,13 +1159,13 @@ if (!isGroupAdmins) return reply(mess.only.admin)
 			
 					
 case 'attp':
-				if (args.length < 1) return reply(`_Y el texto? Ù.ú_\n*ejemplo ${prefix}attp satan Ganteng*`)
+				if (args.length < 1) return reply(`_Y el texto? Ù.ú_\n*ejemplo ${prefix}attp Ganteng*`)
 				attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
 				FxBot.sendMessage(from, attp2, sticker, {quoted: freply})
 				break
 				
 		case 'ttp':
-				if (args.length < 1) return reply(`_Y el texto? Ù.ú_\n*ejemplo ${prefix}ttp satan Ganteng*`)
+				if (args.length < 1) return reply(`_Y el texto? Ù.ú_\n*ejemplo ${prefix}ttp hola a todo *`)
 				ttp = await getBuffer(`http://lolhuman.herokuapp.com/api/ttp?apikey=${LolKey}&text=${body.slice(5)}`)
 				FxBot.sendMessage(from, ttp, sticker, {quoted: freply})
 				break
@@ -1189,7 +1189,7 @@ case 'attp':
                 break
                 
                     case 'stickerwa':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} satan`)
+                    if (args.length == 0) return reply(`Example: ${prefix + command} HH`)
                     query = args.join(" ")
                     get_result = await fetchJson(`http://api.lolhuman.xyz/api/stickerwa?apikey=${LolKey}&query=${query}`)
                     get_result = get_result.result[0].stickers
@@ -1301,7 +1301,7 @@ case 'attp':
 							})
 						    })					
 					} else {
-						reply(`Responde a una imagen con ${prefix}sticker`)
+						reply(`Responde a una imagen con ${prefix}s`)
 					}
 					break
 					
@@ -1312,7 +1312,7 @@ case 'attp':
 					ran= getRandom('.png')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply(' Error al convertir la pegatina en imagen ')
+						if (err) return reply(' Error al convertir el stick en imagen ')
 						buffer = fs.readFileSync(ran)
 						FxBot.sendMessage(from, buffer, image, {quoted: freply, caption: fake})
 						fs.unlinkSync(ran)
@@ -1341,7 +1341,7 @@ uptime = process.uptime()
 const timestampi = speed();
 const latensip = speed() - timestampi
 			             anjink =`◪ Encendido
-├ *Nombre : 𝐹𝑒𝑙𝑖𝑥𝑐𝑟𝑎𝑐𝑘 𝐵𝑜𝑡⛥*_
+├ *Nombre : ⚡HH-BOT⚡*_
 ├ *Runtime :*
 ├  ${kyun(uptime)}
 ├ *Speed :*
@@ -1512,7 +1512,7 @@ break
     			  //********** ONLY GROUP **********//
         case 'linkgroup':
 				case 'linkgrup':
-				case 'linkgc':
+				case 'linkgp':
 				
 				    if (!isGroup) return reply(mess.only.group)
 				    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1522,7 +1522,7 @@ break
 			        break
 			        
         case 'grup':
-					case 'gc':
+					case 'gp':
 					case 'group':
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isGroup) return reply(mess.only.group)
@@ -1582,7 +1582,7 @@ break
 					}
 					break
 					
-					case 'welcome':
+					case 'Bienvenido':
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isGroup) return reply(mess.only.group)
 					if (args.length < 1) return reply('Quien eres? 7-7')
@@ -1829,8 +1829,8 @@ case 'getvn':
                         const { dl_link, thumb, title, filesizeF, filesize } = res
                         axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
                         .then(async (a) => {
-                        if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, `*DESCARGADOR DE MUSICA BY FELIXCRACK*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*: MP3\n*⚖️Tamaño*: ${filesizeF}\n*📎Link* : ${a.data}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE_`)
-		                        const captions = `*DESCARGADOR DE MUSICA BY FELIXCRACK*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*: MP3\n*⚖️Tamaño*: ${filesizeF}\n*📎Link*: ${a.data}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE_ _SI EL COMANDO FALLA PRUEBE CON ${prefix}play2 O ${prefix}play3_`
+                        if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, `*Musica encontrada!!*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*: MP3\n*⚖️Tamaño*: ${filesizeF}\n*📎Link* : ${a.data}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMEE CSM`)
+		                        const captions = `*Musica econtrada!!*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*: MP3\n*⚖️Tamaño*: ${filesizeF}\n*📎Link*: ${a.data}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES CSM _SI EL COMANDO FALLA PRUEBE CON ${prefix}play2 O ${prefix}play3_`
                         sendMediaURL(from, thumb, captions)
                         await sendMediaURL(from, dl_link).catch(() => reply('error'))
                         })                
@@ -1847,7 +1847,7 @@ case 'getvn':
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=${ZeksApi}`)
                if (anu.error) return reply(anu.error)
-                 infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE*`
+                 infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO SPAMES CSM*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 FxBot.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1864,8 +1864,8 @@ case 'getvn':
 				const { dl_link, thumb, title, filesizeF, filesize } = res
 				axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
 				.then((a) => {
-			    if (Number(filesize) >= 30000) return sendMediaURL(from, thumb, `*DESCARGADOR DE AUDIO BY FELIXCRACK*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*:MP3\n*⚖️Tamaño*:${filesizeF}\n*Link* : ${a.data}\n\n_Para la duración de más del límite se presenta en forma de enlace_`)
-						const captions = `*DESCARGADOR DE AUDIO BY FELIXCRACK*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*:MP3\n*⚖️Tamaño*:${filesizeF}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE_`
+			    if (Number(filesize) >= 30000) return sendMediaURL(from, thumb, `*Música encontrada!!*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*:MP3\n*⚖️Tamaño*:${filesizeF}\n*Link* : ${a.data}\n\n_Para la duración de más del límite se presenta en forma de enlace_`)
+						const captions = `*Musica encontrada!!*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*:MP3\n*⚖️Tamaño*:${filesizeF}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES CSM_`
 				sendMediaURL(from, thumb, captions)
 				sendMediaURL(from, dl_link).catch(() => reply(mess.error.api))
 				})
@@ -1886,8 +1886,8 @@ case 'getvn':
 				const { dl_link, thumb, title, filesizeF, filesize } = res
 				axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
 				.then((a) => {
-				if (Number(filesize) >= 40000) return sendMediaURL(from, thumb, `*DESCARGADOR DE VIDEO BY FELIXCRACK*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*:MP3\n*File⚖️Tamaño*:${filesizeF}\n*Link* : ${a.data}\n\n_Para la duración de más del límite se presenta en forma de enlace_`)
-						const captionsYtmp4 = `*Video Encontrado!*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*:MP4\n*⚖️Tamaño*:${filesizeF}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE_`
+				if (Number(filesize) >= 40000) return sendMediaURL(from, thumb, `*Video encontrado!!*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*:MP3\n*File⚖️Tamaño*:${filesizeF}\n*Link* : ${a.data}\n\n_Para la duración de más del límite se presenta en forma de enlace_`)
+						const captionsYtmp4 = `*Video Encontrado!*\n\n*🤓Titulo*: ${title}\n*⏭️Extensión*:MP4\n*⚖️Tamaño*:${filesizeF}\n\n_ESPERE ENVIANDO ARCHIVO, NO SPAMEE CSM_`
 				sendMediaURL(from, thumb, captionsYtmp4)
 				sendMediaURL(from, dl_link).catch(() => reply(mess.error.api))
 				})		
